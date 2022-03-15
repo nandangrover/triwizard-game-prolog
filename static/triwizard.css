@@ -1,0 +1,115 @@
+body {
+    background-color: #fdf6e3;
+}
+
+.vars_table {
+    background-color: #fbfbfb;
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-family: "Inconsolata";
+    font-size: 10pt;
+    line-height: 1.1;
+    overflow: auto;
+}
+
+.vars_cell {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.printed_output {
+    font-family: "Inconsolata";
+    font-weight: bold;
+    font-size: 9pt;
+}
+
+#game-over {
+  display: none;
+}
+
+.things {
+  display: inline-block;
+  border: 1px solid black;
+  width: 120px;
+}
+
+.container {
+    background: black;
+    display: inline-block;
+    border: 5px solid black;
+  }
+  .grid-l1 {
+    display: grid;
+    grid-template-columns: repeat(2, 80px);
+    grid-template-rows: repeat(2, 80px);
+    grid-gap: 5px;
+  }
+  .grid-l2 {
+    display: grid;
+    grid-template-columns: repeat(2, 80px);
+    grid-template-rows: repeat(2, 80px);
+    grid-gap: 5px;
+    /* border: 5px solid gray; */
+  }
+  .grid-l3 {
+    display: grid;
+    grid-template-columns: repeat(2, 80px);
+    grid-template-rows: repeat(2, 80px);
+    grid-gap: 5px;
+    /* border: 5px solid gray; */
+  }
+  .cell {
+     /* center the cell content */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family: Arial;
+    font-size: 25px;
+    font-weight: bold;
+    background: white;
+  }
+
+  .passage {
+
+    height: 81px;
+    top: 120px;
+    position: relative;
+    width: 7%;
+
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial;
+    border: 2px solid black;
+    color: black;
+    font-weight: bold;
+    background: #ea4545;
+    overflow: hidden;
+    line-height: 75px;
+    text-align: center;
+    border: 2px dashed #f69c55;
+    font-size: 10px;
+
+  }
+
+  #passage-l3-l4 {
+      height: 81px;
+      top: 30px;
+      position: relative;
+      width: 82px;
+      display: inline-block;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial;
+      border: 2px solid black;
+      color: black;
+      font-weight: bold;
+      background: #4dea45;
+      overflow: hidden;
+      line-height: 75px;
+      text-align: center;
+      border-radius: 50px;
+      border: 2px dashed #f69c55;
+      font-size: 10px;
+  }
