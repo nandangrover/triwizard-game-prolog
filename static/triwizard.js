@@ -5,20 +5,27 @@
 // Called by <body onload="renderPage();">
 const custom_event = new CustomEvent("moved");
 let currentLoc = "1-1"
+let currentEmoji = "L1-1";
 
 document.addEventListener("moved", function(e) {
     try {
     const location = e.detail.split('at&nbsp;L')[1].split('.')[0];
     console.log(location);
-    if (location.split('-')[0] === '1' || location.split('-')[0] === '2') {
-        document.getElementById(currentLoc).innerHTML = `L${currentLoc}`;
+    if (location.split('-')[0] === '1' || location.split('-')[0] === '2' || location.split('-')[0] === '3') {
+        document.getElementById(currentLoc).innerHTML = currentEmoji;
         currentLoc = location;
+        currentEmoji = document.getElementById(location).innerHTML;
         document.getElementById(location).innerHTML = '🧙';
     } else {
         console.log('Wrong Move')
     }
     console.log(location, 'hello'); // Prints "Example of an event"
 } catch(err) {
+    if (e.detail.indexOf('Hogwarts.') !== -1) {
+        document.getElementById(currentLoc).innerHTML = currentEmoji;
+        document.getElementById('passage-l3-l4').innerHTML = '🧙';
+        document.getElementById('passage-l3-l4').style.fontSize = '39px';
+    }
     console.log('Wrong Move');
 }
 });
@@ -49,6 +56,12 @@ async function renderPage() {
         const object = document.getElementById('use-input').value;
         document.getElementById('use-input').value = '';
         handleSubmit(event, `use(${object})`);
+    });
+
+    document.getElementById('cast').addEventListener('click', event =>  {
+        const spell = document.getElementById('cast-input').value;
+        document.getElementById('cast-input').value = '';
+        handleSubmit(event, `cast(${spell})`);
     });
 
     document.getElementById('result').style.display = 'none';

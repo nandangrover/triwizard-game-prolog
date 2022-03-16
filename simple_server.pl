@@ -36,7 +36,7 @@
 :- use_module(library(debug)).
 :- use_module(library(optparse), [opt_arguments/3]).
 
-:- include('adventure.pl').
+:- include('triwizard.pl').
 
 % The most useful debug flags are here. A complete set of debug
 % flags can be found by
