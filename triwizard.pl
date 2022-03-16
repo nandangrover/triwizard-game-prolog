@@ -105,7 +105,7 @@ take(X) :-
         append([X], I, New),
         retract(inventory_items(I)),
         assert(inventory_items(New)),
-        ((X == food, energy(E), E1 is E + 5, retract(energy(E)), assert(energy(E1)), retract(holding(X)), delete(New, X, New_Without_Food), retract(inventory_items(New)), assert(inventory_items(New_Without_Food)), writeln('Food consumed and energy replenished by 4.')) ; true),
+        ((X == food, energy(E), E1 is E + 4, retract(energy(E)), assert(energy(E1)), retract(holding(X)), delete(New, X, New_Without_Food), retract(inventory_items(New)), assert(inventory_items(New_Without_Food)), writeln('Food consumed and energy replenished by 4.')) ; true),
         write('OK.'),
         !, nl.
 

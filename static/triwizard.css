@@ -432,7 +432,6 @@ input {
 h1.cyberpunk {
   position: relative;
   width: 70%;
-  padding-top: 20px;
 }
 h1.cyberpunk:before {
   content: "";
