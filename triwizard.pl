@@ -1,7 +1,6 @@
 % Triwizard Game
 
 :- dynamic i_am_at/1, at/2, holding/1, energy/1, alive/1 ,inventory_items/1, passage/2 ,unconceal/1.
-% :- retractall(at(_, _)), retractall(i_am_at(_)), retractall(alive(_)).
 
 i_am_at(l1-1).
 
@@ -38,7 +37,6 @@ path(l3-2, n, win) :- passage(l3-2, win).
 energy(3).
 
 alive(1).
-% path()
 at(food, l1-3).
 at(food, l2-1).
 at(food, l3-1).
@@ -47,7 +45,6 @@ at(key, l1-2).
 at(concealed, l2-2).
 at(elderwand, l3-4).
 
-% at(potion, l2-2) :- unconceal(concealed).
 
 inventory_items(['wand']).
 
