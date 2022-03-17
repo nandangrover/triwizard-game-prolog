@@ -16,5 +16,5 @@ Run this from the root directory -  `swipl simple_server.pl --port=9999 --static
 <img width="1500" alt="Screenshot 2022-03-16 at 3 19 09 PM" src="https://user-images.githubusercontent.com/26850905/158624853-6d3e2588-e3bb-4053-a3da-24d2e521afea.png">
 
 
-## Setup JASON
+## Setup Prolog
 https://wwu-pi.github.io/tutorials/lectures/lsp/010_install_swi_prolog.html
